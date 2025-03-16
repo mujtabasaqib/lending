@@ -1,6 +1,8 @@
 use anchor_lang::prelude::*;
+use instructions::*;
 
 mod state;
+mod instructions;
 
 declare_id!("JCkkmdaUAmChf9eypcedCw7AtczLGuxmQbSqKpsZ6HvT");
 
@@ -8,5 +10,8 @@ declare_id!("JCkkmdaUAmChf9eypcedCw7AtczLGuxmQbSqKpsZ6HvT");
 pub mod lending {
     use super::*;
 
+    pub fn init_bank(ctx: Context<InitBank>, liquidation_threshold: u64, max_ltv: u64) -> Result<()> {
+        process_init_bank(ctx, liquidation_threshold, max_ltv)
+    }
    
 }
