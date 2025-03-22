@@ -12,7 +12,7 @@ pub struct User {
   pub deposited_usdc_shares: u64,
   pub borrowed_usdc: u64,
   pub borrowed_usdc_shares: u64,
-  pub usdc_mint: Pubkey,
+  pub usdc_address: Pubkey,
   pub last_updated: i64
 }
 
