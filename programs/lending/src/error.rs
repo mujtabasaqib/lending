@@ -6,4 +6,6 @@ pub enum ErrorCode {
   InsufficientFunds,
   #[msg("User has overborrowed the maximum amount")]
   OverBorrowableAmount,
+  #[msg("User has overpaid the maximum amount")]
+  OverRepay,
 }
